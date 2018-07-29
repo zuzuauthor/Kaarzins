@@ -38,6 +38,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void showSplashScreen() {
+
         runnable = new Runnable() {
             public void run() {
                 Intent intent;
@@ -52,6 +53,7 @@ public class SplashActivity extends BaseActivity {
             }
         };
         handler.postDelayed(runnable, SPLASH_TIME);
+
     }
 
     protected void onPause() {
