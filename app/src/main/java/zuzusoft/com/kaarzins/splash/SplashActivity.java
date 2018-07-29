@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 
+import zuzusoft.com.kaarzins.HomeActivity;
 import zuzusoft.com.kaarzins.ProfileActivity;
 import zuzusoft.com.kaarzins.R;
 import zuzusoft.com.kaarzins.helper.BaseActivity;
@@ -46,7 +47,7 @@ public class SplashActivity extends BaseActivity {
                 } else {
                     intent = new Intent(getApplicationContext(), LoginActivity.class);
                 }*/
-                intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
                 finish();
             }

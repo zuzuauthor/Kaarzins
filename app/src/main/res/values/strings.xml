@@ -9,6 +9,7 @@
     <string name="hint_password">Password</string>
     <string name="hint_occupation">Occupation</string>
     <string name="hint_work_place">Place of Work</string>
+    <string name="sign_euro">£</string>
     <string name="btn_sign_up">Sign Up</string>
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
@@ -21,6 +22,11 @@
     <string name="hint_Location">Location/Area/Town/City/Residence</string>
     <string name="hint_passport_no">National ID/Passport Number</string>
     <string name="hint_dl_no">Driving License Number</string>
+
+    <string name="str_car_feature">5 Passengers \n
+Automatic \n
+Air Conditioner \n
+2/4 Door</string>
 
 
 </resources>
