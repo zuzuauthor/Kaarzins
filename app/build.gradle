@@ -27,43 +27,43 @@ dependencies {
 
 
     //image processing library
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
 
     //circular image view
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //image picker
-    compile 'com.linchaolong.android:imagepicker:1.3'
-    compile 'com.zhihu.android:matisse:0.4.3'
+    implementation 'com.linchaolong.android:imagepicker:1.3'
+    implementation 'com.zhihu.android:matisse:0.4.3'
 
     //image cropper
-    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
 
 
     //camera kit
-    compile 'com.wonderkiln:camerakit:0.12.0'
+    implementation 'com.wonderkiln:camerakit:0.12.0'
 
     //tag list
-    //compile 'com.github.adroitandroid:ChipCloud:2.2.1'
+    //implementation 'com.github.adroitandroid:ChipCloud:2.2.1'
 
     //input field validation
-    compile 'com.github.ragunathjawahar:android-saripaar:android-saripaar-2.0.3'
+    implementation 'com.github.ragunathjawahar:android-saripaar:android-saripaar-2.0.3'
 
     //network call library
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
-    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
 
     //google cloud messaging
-    //compile 'com.google.firebase:firebase-core:12.0.1'
-    //compile 'com.google.firebase:firebase-messaging:12.0.1'
+    //implementation 'com.google.firebase:firebase-core:12.0.1'
+    //implementation 'com.google.firebase:firebase-messaging:12.0.1'
 
     //permission allow library
     implementation 'com.karumi:dexter:4.2.0'
 
     //crash report library
-    compile 'com.devs:acr:1.0.1'
+    implementation 'com.devs:acr:1.0.1'
 
 
 

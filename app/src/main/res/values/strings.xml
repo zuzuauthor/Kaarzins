@@ -19,12 +19,8 @@
     <string name="hint_passport_no">National ID/Passport Number</string>
     <string name="hint_dl_no">Driving License Number</string>
 
-    <!-- 2. National ID/Passport Number
-     3. Uploaded copy of ID/Passport
-     4. Location/Area/Town/City/Residence
 
 
-     7. Driving License Number
-     8. Uploaded Copy of DL-->
+
 
 </resources>
