@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_black_arrow"
+            tools:ignore="VectorDrawableCompat" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        app:srcCompat="@raw/logo_"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#191919"
+        android:textSize="23sp"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:text="Forgot password?" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/btn_green"
+        android:gravity="center"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:text="Please provide your registered email address or mobile number to get an OTP to reset your password." />
+
+    <EditText
+        android:id="@+id/viewInputEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:hint="Registered Email or Mobile Number"
+        android:ems="13"
+        android:inputType="textEmailAddress"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <Button
+        android:id="@+id/viewButtonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewInputEmail"
+        android:layout_marginTop="28dp"
+        android:text="Submit"
+        android:background="@color/btn_green"
+        android:textColor="#F5F5F5"
+        android:layout_alignRight="@+id/viewInputEmail"
+        android:layout_alignEnd="@+id/viewInputEmail"
+        android:layout_alignLeft="@+id/viewInputEmail"
+        android:layout_alignStart="@+id/viewInputEmail" />
+
+
+</RelativeLayout>

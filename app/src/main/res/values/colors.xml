@@ -4,7 +4,23 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="white">#FFFFFF</color>
     <color name="btn_green">#35a79c</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="thin_grey">#efefef</color>
+    <color name="light_heading">#6F7276</color>
+    <color name="brand_color">#303F9F</color>
+
+    <color name="theme_blue">#4C98D9</color>
+    <color name="theme_orange">#FF7C0A</color>
 
 </resources>
