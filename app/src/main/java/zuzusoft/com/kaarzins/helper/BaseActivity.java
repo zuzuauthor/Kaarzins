@@ -40,4 +40,12 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
+    public int getImage(String imageName) {
+
+        int drawableResourceId = this.getResources().getIdentifier(imageName, "drawable", this.getPackageName());
+
+        return drawableResourceId;
+    }
+
 }

@@ -1,7 +1,6 @@
 package zuzusoft.com.kaarzins;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
+import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
 import zuzusoft.com.kaarzins.adapter.CarAdapter;
 import zuzusoft.com.kaarzins.helper.BaseActivity;
 import zuzusoft.com.kaarzins.model.Car;
@@ -65,6 +66,7 @@ public class HomeActivity extends BaseActivity {
 
 
     }
+
 
     private void generateCarList() {
 
