@@ -1,5 +1,6 @@
 package zuzusoft.com.kaarzins.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,8 +15,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import zuzusoft.com.kaarzins.DetailActivity;
 import zuzusoft.com.kaarzins.R;
 import zuzusoft.com.kaarzins.adapter.CarAdapter;
+import zuzusoft.com.kaarzins.listeners.IItemClickListener;
 import zuzusoft.com.kaarzins.model.Car;
 
 /**
@@ -46,6 +49,17 @@ public class CarListFragment extends Fragment {
             "Medium",
             "Medium"};
 
+    private IItemClickListener iItemClickListener = new IItemClickListener() {
+        @Override
+        public void onItemClick(View view, int position) {
+
+            Intent intent = new Intent(getContext(), DetailActivity.class);
+            intent.putExtra(DetailActivity.POSITION, position);
+            startActivity(intent);
+
+        }
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_car_list, container, false);
@@ -71,7 +85,7 @@ public class CarListFragment extends Fragment {
 
         generateCarList();
 
-        adapter = new CarAdapter(getActivity(), carArrayList);
+        adapter = new CarAdapter(getActivity(), carArrayList, iItemClickListener);
         rv_cars.setAdapter(adapter);
 
 
@@ -81,7 +95,7 @@ public class CarListFragment extends Fragment {
     private void generateCarList() {
 
         for (int i = 0; i < carImgUrl.length; i++) {
-            Car car = new Car(carImgUrl[i],
+            Car car = new Car(i + "", getResources().getStringArray(R.array.car_images)[i],
                     carName[i], carType[i], getString(R.string.str_car_feature),
                     getString(R.string.sign_euro) + " " + (30.00 + (i + 1) * 2) + " Per Day");
             carArrayList.add(car);

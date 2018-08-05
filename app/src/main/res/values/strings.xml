@@ -15,6 +15,7 @@
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
     <string name="action_sign_in">Sign In</string>
+    <string name="action_rent_now">Rent Now</string>
     <string name="action_sign_up">Sign Up</string>
     <string name="action_save">Save</string>
     <string name="lbl_forgot_password">Forgot Password?</string>
@@ -29,7 +30,6 @@ Air Conditioner \n
 2/4 Door</string>
 
 
-
     <array name="menuOptions">
         <item>Home</item>
         <item>Personal</item>
@@ -38,5 +38,30 @@ Air Conditioner \n
         <item>About</item>
     </array>
 
+
+
+    <string-array name="car_images">
+        <item>http://pngimg.com/uploads/cadillac/cadillac_PNG69.png</item>
+        <item>http://pngimg.com/uploads/camaro/camaro_PNG34.png</item>
+        <item>http://pngimg.com/uploads/fiat/fiat_PNG11899.png</item>
+        <item>http://pngimg.com/uploads/mercedes/mercedes_PNG1840.png</item>
+        <item>http://pngimg.com/uploads/toyota/toyota_PNG1913.png</item>
+    </string-array>
+
+    <string-array name="car_type">
+        <item>Big</item>
+        <item>Medium</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Medium</item>
+    </string-array>
+
+    <string-array name="car_description">
+        <item>The ATS-V is Cadillac’s athletic, muscle-bound contender, eager to represent the home team in the fight against other performance rides like the BMW M3 and M4.</item>
+        <item>Audio system, Chevrolet MyLink Radio with 7 diagonal color touch-screen, AM/FM stereo with seek-and-scan and digital clock includes Bluetooth streaming audio for music and select phones; featuring Android Auto and Apple CarPlay capability for compatible phone</item>
+        <item>Say goodbye to boring with this adorable scoop of Italian gelato—the Fiat 500 is here to brighten up your garage.</item>
+        <item>Whenever you add the letters AMG to a Mercedes model, you are sure to get breathtaking performance, and the CLS63 AMG is no exception.</item>
+        <item>The car formerly known as the Scion FR-S is now the Toyota 86 and is tasked with keeping the brand’s sports-car flame burning in this crossover-crazed world.</item>
+    </string-array>
 
 </resources>

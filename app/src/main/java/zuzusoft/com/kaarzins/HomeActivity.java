@@ -1,10 +1,12 @@
 package zuzusoft.com.kaarzins;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -12,6 +14,7 @@ import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
 import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
 import zuzusoft.com.kaarzins.adapter.CarAdapter;
 import zuzusoft.com.kaarzins.helper.BaseActivity;
+import zuzusoft.com.kaarzins.listeners.IItemClickListener;
 import zuzusoft.com.kaarzins.model.Car;
 
 
@@ -61,17 +64,25 @@ public class HomeActivity extends BaseActivity {
 
         generateCarList();
 
-        adapter = new CarAdapter(HomeActivity.this, carArrayList);
+        adapter = new CarAdapter(HomeActivity.this, carArrayList,iItemClickListener);
         rv_cars.setAdapter(adapter);
 
 
     }
 
+    private IItemClickListener iItemClickListener = new IItemClickListener() {
+        @Override
+        public void onItemClick(View view, int position) {
+
+        }
+    };
+
+
 
     private void generateCarList() {
 
         for (int i = 0; i < carImgUrl.length; i++) {
-            Car car = new Car(carImgUrl[i],
+            Car car = new Car(i+"",carImgUrl[i],
                     carName[i], carType[i], getString(R.string.str_car_feature),
                     getString(R.string.sign_euro) + " " + (30.00 + (i + 1) * 2) + " Per Day");
             carArrayList.add(car);

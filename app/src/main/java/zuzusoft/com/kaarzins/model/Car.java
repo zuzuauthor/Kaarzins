@@ -6,14 +6,19 @@ package zuzusoft.com.kaarzins.model;
 
 public class Car {
 
-    private String carImageUrl, name, type, features, price;
+    private String id, carImageUrl, name, type, features, price;
 
-    public Car(String carImageUrl, String name, String type, String features, String price) {
+    public Car(String id,String carImageUrl, String name, String type, String features, String price) {
+        this.id = id;
         this.carImageUrl = carImageUrl;
         this.name = name;
         this.type = type;
         this.features = features;
         this.price = price;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getCarImageUrl() {

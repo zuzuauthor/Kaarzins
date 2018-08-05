@@ -2,6 +2,7 @@ package zuzusoft.com.kaarzins.adapter;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,10 +12,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-
 import java.util.ArrayList;
 
 import zuzusoft.com.kaarzins.R;
+import zuzusoft.com.kaarzins.listeners.IItemClickListener;
 import zuzusoft.com.kaarzins.model.Car;
 
 
@@ -25,20 +26,17 @@ import zuzusoft.com.kaarzins.model.Car;
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     LayoutInflater inflater;
     Resources resources;
-    Onclick listener;
+    IItemClickListener listener;
     Context context;
     private ArrayList<Car> carArrayList;
 
 
-    public CarAdapter(Context context, ArrayList<Car> _carArrayList) {
+    public CarAdapter(Context context, ArrayList<Car> _carArrayList, IItemClickListener _iItemClickListener) {
         this.carArrayList = _carArrayList;
         this.context = context;
-
+        this.listener = _iItemClickListener;
     }
 
-    public void setListener(Onclick listener) {
-        this.listener = listener;
-    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -67,6 +65,12 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
 
             Glide.with(context).load(car.getCarImageUrl()).into(viewHolder.iv_car);
 
+            viewHolder.itemContainer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onItemClick(view, position);
+                }
+            });
         }
 
     }
@@ -93,9 +97,11 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tv_price, tv_name, tv_type, tv_features;
         private AppCompatImageView iv_car;
+        private ConstraintLayout itemContainer;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
+            itemContainer = itemLayoutView.findViewById(R.id.itemContainer);
             tv_price = itemLayoutView.findViewById(R.id.tv_price);
             tv_name = itemLayoutView.findViewById(R.id.tv_name);
             tv_type = itemLayoutView.findViewById(R.id.tv_type);
